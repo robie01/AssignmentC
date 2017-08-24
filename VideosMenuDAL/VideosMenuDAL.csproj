@@ -6,8 +6,12 @@
 
   <ItemGroup>
     <Compile Remove="Class1.cs" />
+    <Compile Remove="FakeDB.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Entity\Entity.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
   </ItemGroup>
 </Project>

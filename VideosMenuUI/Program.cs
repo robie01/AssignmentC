@@ -18,7 +18,7 @@ namespace VideosMenuUI
 			{
 
                 Title = "awesome video",
-                About = "drama",
+                About = "c#",
                 Owner = "Robie"
 
 			};
@@ -28,7 +28,7 @@ namespace VideosMenuUI
 			{
 
 				Title = "Second video",
-				About = "love",
+				About = "database",
 				Owner = "Finnur"
 
 			});
