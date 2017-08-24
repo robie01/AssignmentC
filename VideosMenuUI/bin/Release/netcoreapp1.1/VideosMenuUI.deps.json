@@ -1,0 +1,64 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "da39a3ee5e6b4b0d3255bfef95601890afd80709"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "videosmenuui/1.0.0": {
+        "dependencies": {
+          "Entity": "1.0.0",
+          "VideosMenuBLL": "1.0.0"
+        },
+        "runtime": {
+          "VideosMenuUI.dll": {}
+        }
+      },
+      "entity/1.0.0": {
+        "runtime": {
+          "Entity.dll": {}
+        }
+      },
+      "videosmenubll/1.0.0": {
+        "dependencies": {
+          "Entity": "1.0.0",
+          "VideosMenuDAL": "1.0.0"
+        },
+        "runtime": {
+          "VideosMenuBLL.dll": {}
+        }
+      },
+      "videosmenudal/1.0.0": {
+        "dependencies": {
+          "Entity": "1.0.0"
+        },
+        "runtime": {
+          "VideosMenuDAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "videosmenuui/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "entity/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "videosmenubll/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "videosmenudal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<Properties StartupConfiguration="{D7BE6BA3-68AE-4B64-B015-E26040948387}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="VideosMenuApp Status">
+    <Files>
+      <File FileName="VideosMenuApp Status" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Seagate Backup Plus Drive/C#Projects/VideosMenuApp/VideosMenuApp/VideosMenuDAL/FakeDB.cs" relfile="VideosMenuDAL/FakeDB.cs" line="10" column="1" />
+      <Breakpoint file="/Volumes/Seagate Backup Plus Drive/C#Projects/VideosMenuApp/VideosMenuApp/VideosMenuDAL/FakeDB.cs" relfile="VideosMenuDAL/FakeDB.cs" line="12" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.VideosMenuUI PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
