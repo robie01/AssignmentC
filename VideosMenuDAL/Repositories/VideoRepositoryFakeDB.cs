@@ -8,13 +8,13 @@ namespace VideosMenuDAL.Repositories
     public class VideoRepositoryFakeDB : IVideoRepository
     {
 
-		private int Id = 1;
-		private List<Video> Videos = new List<Video>();
+        private static int Id = 1;
+		private static List<Video> Videos = new List<Video>();
 
         public Video Create(Video vid)
         {
 			Video video;
-			Videos.Add(video = new Video()
+            Videos.Add(video = new Video()
 			{
 
 				Id = Id++,

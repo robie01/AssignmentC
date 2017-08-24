@@ -10,46 +10,35 @@ namespace VideosMenuBLL.Services
 
     public class VideoService : IVideoService  // This means the actual CustomerService class should have all the implementation from ICustomerService
     {
+        IVideoRepository repo;
+        public VideoService(IVideoRepository repo)
+        {
+            this.repo = repo;
+        }
         public Video Create(Video vid)
         {
-            Video video;
-            FakeDB.Videos.Add(video = new Video()
-            {
-
-                Id = FakeDB.Id++,
-                Title = vid.Title,
-                About = vid.About,
-                Owner = vid.Owner
-            });
-
-            return video;
+            return repo.Create(vid);
         }
 
 
 
         public Video Delete(int id)
         {
-            //using LINQ(FirstorDefaultMethod) and lambda expression
-            var cust = Get(id);
-            FakeDB.Videos.Remove(cust);
-            return cust;
+            
+            return repo.Delete(id);
 
 
         }
 
         public Video Get(int id)
         {
-            return FakeDB.Videos.FirstOrDefault(x => x.Id == id);
+            return repo.Get(id);
         }
 
-        /// 
-        /// Gets all the customers list from DAL(FakeDB) and save it to a new list(Generic list)
-        /// where its easy for user to manipulate the list from its local list(List<Video>)
-        /// <returns>The all.</returns>
-        /// 
+
         public List<Video> GetAll()
         {
-            return new List<Video>(FakeDB.Videos);
+            return repo.GetAll();
         }
 
 

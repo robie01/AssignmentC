@@ -1,13 +1,14 @@
 ﻿using System;
-
+using VideosMenuBLL.Services;
+using VideosMenuDAL;
 
 namespace VideosMenuBLL
 {
     public class BLLFacade
     {
-        public IVideoService GetVideoService()
+        public IVideoService VideoService
         {
-            return new Services.VideoService();
+            get { return new VideoService(new DALFacade().VideoRepository); }
         }
     }
 }

@@ -22,9 +22,9 @@ namespace VideosMenuUI
                 Owner = "Robie"
 
 			};
-            bllFacade.GetVideoService().Create(cust1);
+            bllFacade.VideoService.Create(cust1);
 
-            bllFacade.GetVideoService().Create(new Video()
+            bllFacade.VideoService.Create(new Video()
 			{
 
 				Title = "Second video",
@@ -34,6 +34,7 @@ namespace VideosMenuUI
 			});
 
             Console.WriteLine($" Id: {cust1.Id} Title: {cust1.Title} About: {cust1.About} Owner: {cust1.Owner}");
+
 
 
             string[] menuItems = { "List of videos", "Add video", "Edit video", "Delete video", "exit" };
@@ -113,7 +114,7 @@ namespace VideosMenuUI
             }
 
 
-            foreach (var customer in bllFacade.GetVideoService().GetAll())
+            foreach (var customer in bllFacade.VideoService.GetAll())
 			{
 				if (customer.Id == id)
 				{
@@ -129,7 +130,7 @@ namespace VideosMenuUI
 
 			if (customerFound != null)
 			{
-                bllFacade.GetVideoService().GetAll().Remove(customerFound);
+                bllFacade.VideoService.GetAll().Remove(customerFound);
 
 			}
 
@@ -140,7 +141,7 @@ namespace VideosMenuUI
 
 		}
 
-		private static void AddCustomers()
+		public static void AddCustomers()
 		{
 			WriteLine("Title:");
 			var title = ReadLine();
@@ -150,22 +151,24 @@ namespace VideosMenuUI
             var owner = ReadLine();
 
 
-            bllFacade.GetVideoService().GetAll().Add(new Video()
+            bllFacade.VideoService.GetAll().Add(new Video()
             {
 
                 Title = title,
                 About = about,
-                Owner= owner
-			});
-		}
+                Owner = owner
+            });
+
+           
+        }
 
 		// output of customers list in the same format.
 		private static void VideosList()
 		{
-            foreach (var video in bllFacade.GetVideoService().GetAll())
+            foreach (var video in bllFacade.VideoService.GetAll())
 			{
 
-                WriteLine($" Id: {video.Id} Title: {video.Title} {video.About} Owner: {video.Owner}");
+                Console.WriteLine($" Id: {video.Id} Title: {video.Title} {video.About} Owner: {video.Owner}");
 
 			}
 		}
