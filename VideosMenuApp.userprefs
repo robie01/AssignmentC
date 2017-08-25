@@ -1,11 +1,7 @@
 ﻿<Properties StartupConfiguration="{D7BE6BA3-68AE-4B64-B015-E26040948387}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="VideosMenuApp Status">
     <Files>
-      <File FileName="VideosMenuUI/Program.cs" Line="163" Column="10" />
-      <File FileName="VideosMenuBLL/Services/VideoService.cs" Line="42" Column="1" />
-      <File FileName="VideosMenuDAL/DALFacade.cs" Line="15" Column="1" />
-      <File FileName="VideosMenuDAL/Repositories/VideoRepositoryFakeDB.cs" Line="26" Column="17" />
-      <File FileName="../../FirstSolutionCore/Console5/Program.cs" Line="166" Column="16" />
+      <File FileName="VideosMenuUI/Program.cs" Line="153" Column="13" />
       <File FileName="VideosMenuApp Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

@@ -130,7 +130,7 @@ namespace VideosMenuUI
 
 			if (customerFound != null)
 			{
-                bllFacade.VideoService.GetAll().Remove(customerFound);
+                bllFacade.VideoService.Delete(customerFound.Id);
 
 			}
 
@@ -151,7 +151,7 @@ namespace VideosMenuUI
             var owner = ReadLine();
 
 
-            bllFacade.VideoService.GetAll().Add(new Video()
+            bllFacade.VideoService.Create(new Video()
             {
 
                 Title = title,
