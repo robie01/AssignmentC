@@ -1,6 +1,6 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
-using Entity;
+using VideosMenuDAL.Entities;
 
 namespace VideosMenuDAL
 {

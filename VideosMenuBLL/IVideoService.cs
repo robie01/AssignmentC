@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Entity;
+using VideosMenuBLL.BO;
 
 
 namespace VideosMenuBLL
@@ -10,17 +10,17 @@ namespace VideosMenuBLL
     public interface IVideoService
     {
         //C
-         Video Create(Video vid);
+         BOVideo Create(BOVideo vid);
 
         //R
-        List<Video> GetAll();
-        Video Get(int Id);
+        List<BOVideo> GetAll();
+        BOVideo Get(int Id);
 
         //U
-        Video Update(Video  video);
+        BOVideo Update(BOVideo  video);
 
         //D
-        Video Delete(int id);
+        BOVideo Delete(int id);
     }
 
 }

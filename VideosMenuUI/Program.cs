@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Entity;
+
 using VideosMenuBLL;
+using VideosMenuBLL.BO;
 using static System.Console;
 
 namespace VideosMenuUI
@@ -14,7 +15,7 @@ namespace VideosMenuUI
 		{
 
 
-			var cust1 = new Video()
+			var cust1 = new BOVideo()
 			{
 
                 Title = "awesome video",
@@ -24,7 +25,7 @@ namespace VideosMenuUI
 			};
             bllFacade.VideoService.Create(cust1);
 
-            bllFacade.VideoService.Create(new Video()
+            bllFacade.VideoService.Create(new BOVideo()
 			{
 
 				Title = "Second video",
@@ -37,7 +38,7 @@ namespace VideosMenuUI
 
 
 
-            string[] menuItems = { "List of videos", "Add video", "Edit video", "Delete video", "exit" };
+            string[] menuItems = { "List of videos", "Add video", "Edit video", "Delete video","Search video", "exit" };
 
 
 			//show menu
@@ -46,7 +47,7 @@ namespace VideosMenuUI
 
 			var selection = showMenu(menuItems);
 
-			while (selection != 5)
+			while (selection != 6)
 			{
 
 				switch (selection)
@@ -63,6 +64,9 @@ namespace VideosMenuUI
 					case 4:
 						DeleteCustomers();
 						break;
+                    case 5:
+                        SearchVideo();
+                        break;
 					default:
 						break;
 
@@ -77,12 +81,15 @@ namespace VideosMenuUI
 
 		}
 
+      
 
-		/// <summary>
-		/// Edits the costumers.
-		/// </summary>
-        private static Video EditCostumers()
+
+        /// <summary>
+        /// Edits the costumers.
+        /// </summary>
+        private static BOVideo EditCostumers()
 		{
+
             var video = FindVideoById();
             if (video != null)
 			{
@@ -93,6 +100,7 @@ namespace VideosMenuUI
                 video.About = ReadLine();
 				WriteLine("Owner:");
                 video.Owner = ReadLine();
+                bllFacade.VideoService.Update(video);
 			}
 			else
 			{
@@ -103,25 +111,17 @@ namespace VideosMenuUI
 		}
 
 
-        private static Video FindVideoById()
+        private static BOVideo FindVideoById()
 		{
-            int id;
+            
 			WriteLine("Insert Video's id:");
+            int id;
 
             while (!int.TryParse(ReadLine(), out id))
             {
                 WriteLine("Please enter a number.");
             }
-
-
-            foreach (var customer in bllFacade.VideoService.GetAll())
-			{
-				if (customer.Id == id)
-				{
-					return customer;
-				}
-			}
-			return null;
+            return bllFacade.VideoService.Get(id);
 		}
 
 		private static void DeleteCustomers()
@@ -151,7 +151,7 @@ namespace VideosMenuUI
             var owner = ReadLine();
 
 
-            bllFacade.VideoService.Create(new Video()
+            bllFacade.VideoService.Create(new BOVideo()
             {
 
                 Title = title,
@@ -168,7 +168,7 @@ namespace VideosMenuUI
             foreach (var video in bllFacade.VideoService.GetAll())
 			{
 
-                Console.WriteLine($" Id: {video.Id} Title: {video.Title} {video.About} Owner: {video.Owner}");
+                Console.WriteLine($" Id: {video.Id} Title: {video.Title} About: {video.About} Owner: {video.Owner}");
 
 			}
 		}

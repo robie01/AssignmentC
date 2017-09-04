@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideosMenuBLL", "VideosMenu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideosMenuDAL", "VideosMenuDAL\VideosMenuDAL.csproj", "{30BC8FAC-5178-4AEC-9ADC-E58E07C4978D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entity", "Entity\Entity.csproj", "{3547C9E1-729C-4E2C-8572-BCD231A3A6A4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +25,5 @@ Global
 		{30BC8FAC-5178-4AEC-9ADC-E58E07C4978D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30BC8FAC-5178-4AEC-9ADC-E58E07C4978D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30BC8FAC-5178-4AEC-9ADC-E58E07C4978D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3547C9E1-729C-4E2C-8572-BCD231A3A6A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3547C9E1-729C-4E2C-8572-BCD231A3A6A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3547C9E1-729C-4E2C-8572-BCD231A3A6A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3547C9E1-729C-4E2C-8572-BCD231A3A6A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

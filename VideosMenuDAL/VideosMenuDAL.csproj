@@ -7,11 +7,22 @@
   <ItemGroup>
     <Compile Remove="Class1.cs" />
     <Compile Remove="FakeDB.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Entity\Entity.csproj" />
+    <Compile Remove="Context\VideoServiceEFInMemory.cs" />
+    <Compile Remove="Context\CustomerRepositoryEFMemory.cs" />
+    <Compile Remove="Context\VideoRepositoryEFMemory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Repositories\" />
+    <Folder Include="Context\" />
+    <Folder Include="UOW\" />
+    <Folder Include="Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="1.1.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Repositories\VideoRepositoryEFMemory.cs~" />
+    <None Remove="IUnitOfWork.cs~" />
+    <None Remove="DALFacade.cs~" />
   </ItemGroup>
 </Project>

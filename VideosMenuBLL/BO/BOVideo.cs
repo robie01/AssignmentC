@@ -1,7 +1,7 @@
 ﻿using System;
-namespace Entity
+namespace VideosMenuBLL.BO
 {
-    public class Video
+    public class BOVideo
     {
 		
 			public int Id
@@ -26,5 +26,15 @@ namespace Entity
 				get;
 				set;
 			}
-		}
+
+        public string AllInformation
+            {
+            
+             get {return ($"{Title} {About} {Owner}"); }
+			
+            }
+
+
+
+    }
 }
