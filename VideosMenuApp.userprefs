@@ -1,14 +1,5 @@
 ﻿<Properties StartupConfiguration="{D7BE6BA3-68AE-4B64-B015-E26040948387}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="VideosMenuApp Status">
-    <Files>
-      <File FileName="VideosMenuBLL/Services/VideoService.cs" Line="58" Column="1" />
-      <File FileName="VideosMenuBLL/Converter/CustomerConverter.cs" Line="19" Column="1" />
-      <File FileName="VideosMenuUI/Program.cs" Line="101" Column="25" />
-      <File FileName="VideosMenuDAL/Repositories/VideoRepositoryEFMemory.cs" Line="35" Column="1" />
-      <File FileName="VideosMenuDAL/UOW/UnitOfWorkMem.cs" Line="29" Column="1" />
-      <File FileName="VideosMenuApp Status" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
